@@ -7,5 +7,14 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 10.times do |i|
-    Network.create(name: "Network #{i}")
+    Network.create(name: "Network #{i}", state: "active")
+end
+
+10.times do |i|
+    Network.create(name: "Network #{i}", state: "inactive")
+end
+
+20.times do |i|
+    network = Network.find(Network.pluck(:id).sample)
+    Provider.create(name: "Provider #{i}", network: network)
 end

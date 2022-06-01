@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2022_05_31_192030) do
   enable_extension "plpgsql"
 
   create_table "networks", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.text "name"
+    t.text "name", null: false
     t.text "network_type"
     t.text "state"
     t.string "logo_url"
