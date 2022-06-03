@@ -64,3 +64,6 @@ gem 'devise'
 
 # Authorization
 gem "pundit", "~> 2.2"
+
+# Serializers
+gem 'fast_jsonapi'
