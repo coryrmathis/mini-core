@@ -1,5 +1,11 @@
 require 'rails_helper'
 
-RSpec.describe "networks/show.html.erb", type: :view do
-  pending "add some examples to (or delete) #{__FILE__}"
+RSpec.describe "networks/show", type: :view do
+  before(:each) do
+    @network = assign(:network, Network.create!())
+  end
+
+  it "renders attributes in <p>" do
+    render
+  end
 end

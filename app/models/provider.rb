@@ -1,3 +1,3 @@
 class Provider < ApplicationRecord
-    belongs_to :network
+    belongs_to :network, required: false
 end

@@ -1,0 +1,10 @@
+<br>
+<br>
+<% if notice %>
+    <div><%=  notice%></div>
+<% end %>
+<%= form_for @provider do |f|%>
+    <%= f.label :name  %>
+    <%= f.text_field :name %>
+    <%= f.submit "Save"  %>
+<% end %>

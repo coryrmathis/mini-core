@@ -1,0 +1,9 @@
+<h1>Providers</h1>
+
+<ul>
+    <% @providers.each do |provider| %>
+        <li><%= link_to provider.name, provider_path(provider) %></li>
+        <li><%= link_to "Edit", edit_provider_path(provider) %></li>
+        <td><%= link_to 'Destroy', provider, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
+</ul>

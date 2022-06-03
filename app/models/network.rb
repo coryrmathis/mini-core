@@ -7,5 +7,6 @@ class Network < ApplicationRecord
 
     validates :state, inclusion: { in: ['active', 'inactive']}
     validates :name, presence: true
+    
 
 end 
