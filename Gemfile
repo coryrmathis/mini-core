@@ -58,3 +58,9 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'dry-validation'
+
+# Authentication
+gem 'devise'
+
+# Authorization
+gem "pundit", "~> 2.2"
