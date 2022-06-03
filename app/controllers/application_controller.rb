@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-    before_action :authenticate_user!
+    # before_action :authenticate_user!
     include Pundit::Authorization
     
     rescue_from Pundit::NotAuthorizedError, with: :forbidden_response

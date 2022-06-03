@@ -4,8 +4,8 @@ class NetworksController < ApplicationController
   def index
     validated_result = Networks::SearchValidator.new.call(request.params)
     if validated_result.success?
-      networks = Network.where(validated_result[:filter])
-      authorize networks
+      networks = Network.active.where(validated_result[:filter])
+      # authorize networks
 
       render json: NetworkSerializer.new(networks).serializable_hash
     else
